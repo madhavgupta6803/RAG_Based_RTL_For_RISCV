@@ -111,3 +111,4 @@ Icon
 *.bak
 tmp/
 scratch/
+corpus/reference_rtl/*/.git/
