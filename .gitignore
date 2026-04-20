@@ -1,0 +1,113 @@
+# ============================================================
+# Python
+# ============================================================
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# ============================================================
+# Secrets & env
+# ============================================================
+.env
+.env.local
+*.key
+secrets/
+
+# ============================================================
+# RAG artifacts — regeneratable, don't commit
+# ============================================================
+chroma_db/
+*.faiss
+*.index
+embeddings_cache/
+.cache/
+
+# ============================================================
+# Hugging Face / model weights (huge, never commit)
+# ============================================================
+models/
+*.safetensors
+*.bin
+*.gguf
+*.pt
+*.pth
+hf_cache/
+
+# ============================================================
+# Verilator build outputs
+# ============================================================
+obj_dir/
+*.vcd
+*.fst
+*.xml
+sim/build/
+
+# ============================================================
+# riscv-tests build artifacts
+# ============================================================
+# Keep source, exclude compiled binaries & dumps
+tests/riscv-tests/isa/*.dump
+tests/riscv-tests/isa/rv32*-p-*[!.]
+tests/riscv-tests/isa/rv32*-v-*[!.]
+tests/riscv-tests/isa/rv64*
+tests/riscv-tests/benchmarks/*.dump
+tests/riscv-tests/benchmarks/*.riscv
+tests/riscv-tests/**/*.o
+tests/riscv-tests/install/
+
+# Keep the generated hex files? Your call:
+# Commit them → reviewers can reproduce without the toolchain
+# Ignore them → smaller repo, they regenerate via build_hex.sh
+# Recommendation: commit them (they're small, ~hundreds of KB total)
+# tests/hex/
+
+# ============================================================
+# Simulation traces / logs (can get large)
+# ============================================================
+results/traces/*.json
+results/traces/*.log
+!results/traces/.gitkeep
+*.log
+sim.log
+
+# ============================================================
+# Editor / IDE
+# ============================================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# ============================================================
+# macOS
+# ============================================================
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+
+# ============================================================
+# Jupyter
+# ============================================================
+*.ipynb_checkpoints
+.ipynb_checkpoints/
+
+# ============================================================
+# Misc
+# ============================================================
+*.tmp
+*.bak
+tmp/
+scratch/

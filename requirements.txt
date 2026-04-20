@@ -1,0 +1,33 @@
+# LLM client (OpenAI SDK works with Ollama's compatible API)
+openai>=1.50.0
+
+# RAG framework
+langchain>=0.3.0
+langchain-community>=0.3.0
+langchain-text-splitters>=0.3.0
+
+# Vector store
+chromadb>=0.5.0
+
+# Embeddings & reranking (open source)
+sentence-transformers>=3.0.0
+torch>=2.2.0
+
+# Sparse retrieval
+rank-bm25>=0.2.2
+
+# Document loading
+pypdf>=4.3.0
+beautifulsoup4>=4.12.0
+lxml>=5.0.0
+
+# Tokenization / utilities
+tiktoken>=0.7.0
+tqdm>=4.66.0
+numpy>=1.26.0
+pandas>=2.2.0
+
+# Dev tools
+python-dotenv>=1.0.0
+ipython>=8.20.0
+jupyter>=1.0.0
